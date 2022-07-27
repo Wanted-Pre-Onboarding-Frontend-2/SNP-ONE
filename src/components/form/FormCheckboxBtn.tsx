@@ -16,7 +16,7 @@ interface CheckProps {
   values: string[];
   control: any;
   register: any;
-  required?: any;
+  required?: boolean;
 }
 
 const FormCheckbox = ({
@@ -35,7 +35,7 @@ const FormCheckbox = ({
           control={control}
           defaultValue={false}
           rules={{
-            required: required,
+            required,
           }}
           render={({ field, fieldState: { error } }) => (
             <>

@@ -5,11 +5,11 @@ import { Controller } from "react-hook-form";
 interface InputProps {
   label: string;
   placeholder?: string;
-  inputProps?: any;
-  name?: any;
+  inputProps?: object;
+  name: string;
   control?: any;
   sx?: any;
-  required?: any;
+  required?: boolean;
   pattern?: any;
   errorMessage?: string;
 }

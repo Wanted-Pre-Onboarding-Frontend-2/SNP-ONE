@@ -18,6 +18,7 @@ const FormSelect = ({
   control,
   sx,
   onBlur,
+  required,
 }: SelectProps) => {
   return (
     <Controller
@@ -25,7 +26,7 @@ const FormSelect = ({
       control={control}
       defaultValue=""
       rules={{
-        required: true,
+        required,
       }}
       render={({ field, fieldState: { error } }) => (
         <Select {...field} onBlur={onBlur} sx={sx} error={error !== undefined}>
